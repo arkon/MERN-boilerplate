@@ -1,0 +1,20 @@
+{
+  "user": {
+    "id": "20744053",
+    "title": "Mr",
+    "forename": "Arsam",
+    "surname": "Sarabi",
+    "userName": "arsams",
+    "emailAddress": "arsam.sarabi@contactpartners.com",
+    "userimage": "64_15.png",
+    "policyId": 2107,
+    "policyName": "cp staff",
+    "isDeactivated": false,
+    "isLockedOut": false,
+    "physicalCenterName": "ContactPartners",
+    "companyId": 51697,
+    "physicalSiteId": 1968,
+    "branchId": "",
+    "isAdmin": true
+  }
+}

@@ -1,0 +1,32 @@
+@import './_colours.scss';
+
+$blue: material-color('indigo', '500'); // #3f51b5
+$lightGrey: material-color('grey', '200'); // #EEEEEE
+$darkGrey: material-color('grey', '500'); // #9E9E9E
+$white: material-color('grey', '50'); // #FAFAFA
+$black: material-color('grey', '900'); // #212121
+$green: material-color('green', '500'); // #4CAF50
+// $red: material-color('red', '500'); // #F44336
+$red: #D3292E;
+$amber: material-color('amber', 'a400'); // #FFC400
+
+
+// Pallete variables 
+$colour-primary: $black;
+$colour-secondary: $darkGrey;
+$colour-alternative: $lightGrey;
+$colour-accent: $red;
+$colour-success: $green;
+$colour-danger: $red;
+$colour-warning: $amber;
+
+:export {
+  primary: $colour-primary;
+  secondary: $colour-secondary;
+  alternative: $colour-alternative;
+  accent: $colour-danger;
+  success: $colour-success;
+  danger: $colour-danger;
+  warning: $colour-warning;
+  white: $white;
+}

@@ -8,7 +8,7 @@ module.exports = (app) => {
       .catch((err) => next(err));
   });
 
-  app.post('/api/counters', function (req, res, next) {
+  app.post('/api/counters', (req, res, next) => {
     const counter = new Counter();
 
     counter.save()
@@ -16,10 +16,10 @@ module.exports = (app) => {
       .catch((err) => next(err));
   });
 
-  app.delete('/api/counters/:id', function (req, res, next) {
+  app.delete('/api/counters/:id', (req, res, next) => {
     Counter.findOneAndRemove({ _id: req.params.id })
       .exec()
-      .then((counter) => res.json())
+      .then(() => res.json())
       .catch((err) => next(err));
   });
 
@@ -27,10 +27,11 @@ module.exports = (app) => {
     Counter.findById(req.params.id)
       .exec()
       .then((counter) => {
-        counter.count++;
+        const _counter = counter;
+        _counter.count++;
 
         counter.save()
-          .then(() => res.json(counter))
+          .then(() => res.json(_counter))
           .catch((err) => next(err));
       })
       .catch((err) => next(err));
@@ -40,7 +41,8 @@ module.exports = (app) => {
     Counter.findById(req.params.id)
       .exec()
       .then((counter) => {
-        counter.count--;
+        const _counter = counter;
+        _counter.count--;
 
         counter.save()
           .then(() => res.json(counter))
