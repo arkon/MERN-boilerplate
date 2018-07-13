@@ -1,7 +1,9 @@
 # Compiled files
 dist/
+build/
 
-# Config file
+# Config files
+.env
 config/config.js
 
 # Node stuff
@@ -12,6 +14,7 @@ node_modules
 logs
 *.log
 npm-debug.log*
+.pm2
 
 # OS stuff
 Desktop.ini
@@ -22,3 +25,6 @@ $RECYCLE.BIN/
 .DS_Store
 .Spotlight-V100
 .Trashes
+
+# IDE stuff
+.vscode/
