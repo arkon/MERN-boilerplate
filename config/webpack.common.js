@@ -39,7 +39,7 @@ module.exports = {
 
       // SCSS files
       {
-        test: /\.scss$/,
+        test: /\.css$/,
         loader: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
@@ -49,16 +49,7 @@ module.exports = {
                 'sourceMap': true,
                 'importLoaders': 1
               }
-            },
-            {
-              loader: 'postcss-loader',
-              options: {
-                plugins: () => [
-                  autoprefixer
-                ]
-              }
-            },
-            'sass-loader'
+            }
           ]
         })
       }

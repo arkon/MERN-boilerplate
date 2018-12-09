@@ -17,7 +17,7 @@ module.exports = (app) => {
   });
 
   app.delete('/api/counters/:id', function (req, res, next) {
-    Counter.findOneAndRemove({ _id: req.params.id })
+    Counter.findOneAndDelete({ _id: req.params.id })
       .exec()
       .then((counter) => res.json())
       .catch((err) => next(err));

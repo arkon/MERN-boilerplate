@@ -12,6 +12,8 @@ node_modules
 logs
 *.log
 npm-debug.log*
+package-lock.json
+
 
 # OS stuff
 Desktop.ini
