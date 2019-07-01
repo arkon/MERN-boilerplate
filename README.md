@@ -31,3 +31,11 @@ Development (Webpack dev server) mode:
 ```shell
 npm run start:dev
 ```
+
+## Troubleshooting
+
+If your Babel loader isn't recognising JSX, you may need to add a `.babelrc` file at the root of your project with the following code.
+
+```{
+    "presets": ["@babel/preset-react"]
+}```
